@@ -21,7 +21,7 @@ DEVICE     = atmega328
 PORT 	   = /dev/tty.usbserial-DN02MOXU
 CLOCK      = 16000000
 PROGRAMMER = -c stk500v1 
-OBJECTS    = main.o myUSART.o 
+OBJECTS    = main.o myUSART.o myLCD.o
 FUSES      = -U hfuse:w:0xd9:m -U lfuse:w:0x24:m
 
 # ATMega8 fuse bits used above (fuse bits for other devices are different!):
