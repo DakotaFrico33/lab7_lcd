@@ -3,8 +3,8 @@
 #include "myUSART.h"
 
 #define LCD_Reset				0b00110000
-#define LCD_4bit_enable			0b00110000
-#define LCD_4bit_mode			0b00110000
+#define LCD_4bit_enable			0b00101000
+#define LCD_4bit_mode			0b00010100
 #define LCD_4bit_displayOFF		0b00001000
 #define LCD_4bit_displayON		0b00001100
 #define LCD_4bit_displayCLEAR	0b00000001
@@ -114,12 +114,11 @@ void LCD_write_char(char data)
 
 int main()
 {
-		DDRB = 0x23;
+		DDRB = 0b00100011;
 		DDRD = 0xF0;
-		char MyChar = 'C';
+		char MyChar = 'A';
 
 		LCD_init();
-
 		LCD_write_char(MyChar);
 
 		LCD_write_instruction(LCD_4bit_cursorSET|LineTwoStart);
