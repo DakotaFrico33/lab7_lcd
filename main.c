@@ -46,7 +46,7 @@ int main()
 {
 		DDRB = 0b00100011;
 		DDRD = 0xF0;
-		char myStr[100] = "Hello!";
+		char myStr[100] = "Hola!";
 		char MyChar = 'C';
 		// Initailize the LCD for 4-bit mode, two lines, and 5 x 8 characters //
 		// Inits found on Page 46 of datasheet and Table 6 for function set instructions //
