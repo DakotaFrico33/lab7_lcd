@@ -11,6 +11,7 @@
 #define LCD_4bit_displayCLEAR	0b00000001 // replace all chars with "space" //
 #define LCD_4bit_entryMODE		0b00000110 // set cursor to write/read from left -> right //
 #define LCD_4bit_cursorSET		0b10000000 // set cursor posiion //
+#define LCD_4bit_lineOne		0b00000010
 
 // For two line mode //
 #define LineOneStart	0x00
@@ -27,6 +28,8 @@ void LCD_write_4bits(uint8_t);
 void LCD_EnablePulse();
 void LCD_write_instruction(uint8_t);
 void LCD_write_char(char);
+int keyCheck(unsigned char , unsigned char, char, char *);
+int lineChange(int, char *);
 
 
 #endif
